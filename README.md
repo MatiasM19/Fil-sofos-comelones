@@ -12,7 +12,6 @@ El objetivo es simular cómo un grupo de filósofos alternan entre **pensar** y 
 | `filosofos.c` | Versión inicial del problema, sin control de concurrencia. |
 | `filosofosMutex.c` | Versión con sincronización básica usando mutex. |
 | `filosofosMutexTenedores.c` | Versión final que soluciona los problemas de *race condition*, *deadlock* y *starvation*. |
-| `README.md` | Documento explicativo del proyecto. |
 | `Dining-philosophers.jpg` | Imagen ilustrativa del problema. |
 
 ---
@@ -36,9 +35,19 @@ Además, se establece un **orden de adquisición de los recursos** (tenedores) p
 
 ##  Ejecución en Linux
 ###  Compilar el programa
-Abre una terminal en la carpeta del proyecto y ejecuta:
+Abre una terminal en la carpeta del proyecto y ejecuta (si no se tiene el gcc se debe de instalar con "sudo apt install gcc"):
 ```bash
 gcc filosofosMutexTenedores.c -o filosofos -lpthread
 ./filosofos
+```
 
 ---
+
+##  Para probar las versiones anteriores poner en la terminal
+```bash
+gcc filosofos.c -o filosofos1 -lpthread
+./filosofos1
+
+gcc filosofosMutex.c -o filosofos2 -lpthread
+./filosofos2
+```
