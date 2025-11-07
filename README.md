@@ -40,3 +40,5 @@ Abre una terminal en la carpeta del proyecto y ejecuta:
 ```bash
 gcc filosofosMutexTenedores.c -o filosofos -lpthread
 ./filosofos
+
+---
